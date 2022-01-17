@@ -2,26 +2,27 @@
     <main>
         <ul class="container flex">
             <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
         </ul>
     </main>
 </template>
 
 <script>
 import Card from "./Card.vue";
+import axios from 'axios';
 
 export default {
     name: "Main",
     components: {
         Card,
+    },
+    mounted() {
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     data() {

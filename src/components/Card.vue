@@ -1,7 +1,7 @@
 <template>
     <li class="card flex">
         <div class="card-img">
-            <img src="" alt="">
+            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="Bon Jovi">
         </div>
         <div class="card-txt text-center">
             <h2 class="album">ALBUM</h2>
@@ -30,6 +30,9 @@ export default {
             height: 150px;
             margin: 1em;
             background-color: salmon;
+            img {
+                width: 100%;
+            }
         }
         .card-txt {
             margin: 1em;
