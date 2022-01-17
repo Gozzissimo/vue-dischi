@@ -1,7 +1,7 @@
 <template>
-    <main>
+    <div>
         QUA la card
-    </main>
+    </div>
 </template>
 
 <script>
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="sss" scoped>
-
+<style lang="scss" scoped>
+    
 </style>

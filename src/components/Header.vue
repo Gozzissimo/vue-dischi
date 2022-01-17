@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>SPOTIFY</h1>
+        <img src="../assets/img/Spotify_logo_without_text.svg.png" alt="">
     </header>
 </template>
 
@@ -10,6 +10,14 @@ export default {
 }
 </script>
 
-<style lang="sss" scoped>
+<style lang="scss" scoped>
+    @import "../assets/scss/partials/_variables.scss";
 
+    header {
+        background-color: $lightBgColor;
+        padding: 1em;
+        img {
+            width: 3em;
+        }
+    }
 </style>
