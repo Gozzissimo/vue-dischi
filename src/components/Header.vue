@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="flex">
         <img src="../assets/img/Spotify_logo_without_text.svg.png" alt="">
     </header>
 </template>
@@ -15,7 +15,9 @@ export default {
 
     header {
         background-color: $lightBgColor;
-        padding: 1em;
+        height: 80px;
+        align-items: center;
+        padding: 0 1em;
         img {
             width: 3em;
         }

@@ -1,7 +1,17 @@
 <template>
-    <main class="container">
-        QUA IL MAIN
-        <Card />
+    <main>
+        <ul class="container flex">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+        </ul>
     </main>
 </template>
 
@@ -23,5 +33,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import "../assets/scss/partials/_variables.scss";
 
+    main {
+        background-color: $darkBgColor;
+        height: calc(100vh - 80px);
+        .container {
+            flex-wrap: wrap;
+            padding: 4em 0;
+        }
+    }
 </style>
