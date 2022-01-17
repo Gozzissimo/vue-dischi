@@ -1,12 +1,12 @@
 <template>
     <li class="card flex">
         <div class="card-img">
-            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="Bon Jovi">
+            <img :src="albumPoster" :alt="albumTitle">
         </div>
         <div class="card-txt text-center">
-            <h2 class="album">ALBUM</h2>
-            <h3 class="artist">Artista</h3>
-            <h4 class="year">Anno</h4>
+            <h2 class="album">{{ albumTitle }}</h2>
+            <h3 class="artist">{{ albumArtist }}</h3>
+            <h4 class="year">{{ albumYear }}</h4>
         </div>
     </li>
 </template>
@@ -14,6 +14,7 @@
 <script>
 export default {
     name: "Card",
+    props: ['albumPoster', 'albumTitle', 'albumArtist', 'albumYear']
 }
 </script>
 
