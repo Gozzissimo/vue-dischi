@@ -1,7 +1,7 @@
 <template>
     <li class="card flex">
         <div class="card-img">
-            <img :src="image" :alt="heading2">
+            <img :src="image" :alt="imageAlt">
         </div>
         <div class="card-txt text-center">
             <h2 class="album">{{ heading2 }}</h2>
@@ -14,7 +14,7 @@
 <script>
 export default {
     name: "Card",
-    props: ['image', 'heading2', 'heading3', 'heading4']
+    props: ['image', 'imageAlt', 'heading2', 'heading3', 'heading4']
 }
 </script>
 

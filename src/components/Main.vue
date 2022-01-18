@@ -6,6 +6,7 @@
                     v-for="(card, index) in cards" 
                     :key="index"
                     :image="card.poster"
+                    :imageAlt="card.title + ' - ' + card.author"
                     :heading2="card.title"
                     :heading3="card.author"
                     :heading4="card.year"
