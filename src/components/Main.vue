@@ -2,6 +2,7 @@
     <main>
         <Select 
             @selectGenre="filterGenre($event)"
+            @selectArtist="filterArtist($event)"
         />
         <div v-if="cards">
             <ul class="container flex" >
@@ -17,7 +18,7 @@
             </ul>
         </div>
         <div v-else>
-            <h1 class="text-center">Loading...</h1>
+            <p class="text-center">Loading...</p>
         </div>
     </main>
 </template>
@@ -122,12 +123,16 @@ export default {
     },
 
     computed: {
-        filteredCards() {
-            console.log('Test Funzione');
-            if (this.genreSelected === '') {
-                return this.cards
-            } 
-                return this.cards.filter((element) => element.genre === this.genreSelected);
+        filteredCards(){
+            if(this.genreSelected == '' && this.artistSelected == ''){
+                return this.cards;
+            } else if (this.genreSelected !== '' && this.artistSelected == '') {
+                return this.cards.filter((element) => element.genre == this.genreSelected);
+            } else if (this.genreSelected == '' && this.artistSelected !== '') {
+                return this.cards.filter((element) => element.author == this.artistSelected);
+            } else {
+                return this.cards.filter((element) => element.genre == this.genreSelected && element.author == this.artistSelected);
+            }
         }
     },
 
@@ -135,12 +140,17 @@ export default {
         return {
             cards: null,
             genreSelected: '',
+            artistSelected: '',
         }
     },
 
     methods: {
         filterGenre(input) {
             this.genreSelected = input;
+        },
+
+        filterArtist(input) {
+            this.artistSelected = input;
         }
     }
 }
