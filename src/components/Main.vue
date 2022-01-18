@@ -121,21 +121,26 @@ export default {
             });
     },
 
+    computed: {
+        filteredCards() {
+            console.log('Test Funzione');
+            if (this.genreSelected === '') {
+                return this.cards
+            } 
+                return this.cards.filter((element) => element.genre === this.genreSelected);
+        }
+    },
+
     data() {
         return {
             cards: null,
-            filteredCards: null,
+            genreSelected: '',
         }
     },
 
     methods: {
-        filterGenre(text) {
-            console.log('Test Funzione');
-            if (text === '') {
-                this.filteredCards = this.cards
-            } else {
-                this.filteredCards = this.cards.filter((element) => element.genre === text);
-            }
+        filterGenre(input) {
+            this.genreSelected = input;
         }
     }
 }
