@@ -30,7 +30,7 @@ export default {
             width: 150px;
             height: 150px;
             margin: 1em;
-            background-color: salmon;
+            // background-color: salmon;
             img {
                 width: 100%;
             }

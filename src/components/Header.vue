@@ -15,9 +15,8 @@ export default {
 
     header {
         background-color: $lightBgColor;
-        height: 80px;
         align-items: center;
-        padding: 0 1em;
+        padding: 1em;
         img {
             width: 3em;
         }

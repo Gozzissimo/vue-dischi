@@ -127,7 +127,6 @@ export default {
 
     main {
         background-color: $darkBgColor;
-        height: calc(100vh - 80px);
         .container {
             flex-wrap: wrap;
             padding: 4em 0;
