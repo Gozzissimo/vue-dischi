@@ -6,7 +6,7 @@
         <div v-if="cards">
             <ul class="container flex" >
                 <Card 
-                    v-for="(card, index) in cards" 
+                    v-for="(card, index) in filteredCards" 
                     :key="index"
                     :image="card.poster"
                     :imageAlt="card.title + ' - ' + card.author"
@@ -114,6 +114,7 @@ export default {
             .then((result) => {
                 console.log(result);
                 this.cards = result.data.response;
+                this.filteredCards = result.data.response;
             })
             .catch((error) => {
                 console.log(error);
@@ -123,14 +124,19 @@ export default {
     data() {
         return {
             cards: null,
+            filteredCards: null,
         }
     },
 
     methods: {
-        filterGenre() {
+        filterGenre(text) {
             console.log('Test Funzione');
-            // this.cards
-        },
+            if (text === '') {
+                this.filteredCards = this.cards
+            } else {
+                this.filteredCards = this.cards.filter((element) => element.genre === text);
+            }
+        }
     }
 }
 </script>

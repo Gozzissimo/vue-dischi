@@ -1,13 +1,13 @@
 <template>
     <div>
         <select 
-            v-model="selected" 
+            v-model="selectedGenre" 
             @change="$emit('selectGenre', selectedGenre)"
-            name="genre" 
-            id="genre">
-                <option disabled value="">All</option>
-                <option value="2">Rock</option>
-                <option value="3">Pop</option>
+            name="genres" 
+            id="genres">
+                <option value="">All</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
         </select>
     </div>
 </template>
