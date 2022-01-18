@@ -5,10 +5,10 @@
                 <Card 
                     v-for="(card, index) in cards" 
                     :key="index"
-                    :albumPoster="card.poster"
-                    :albumTitle="card.title"
-                    :albumArtist="card.author"
-                    :albumYear="card.year"
+                    :image="card.poster"
+                    :heading2="card.title"
+                    :heading3="card.author"
+                    :heading4="card.year"
                 />
             </ul>
         </div>

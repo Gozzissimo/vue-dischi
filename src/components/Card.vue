@@ -1,12 +1,12 @@
 <template>
     <li class="card flex">
         <div class="card-img">
-            <img :src="albumPoster" :alt="albumTitle">
+            <img :src="image" :alt="heading2">
         </div>
         <div class="card-txt text-center">
-            <h2 class="album">{{ albumTitle }}</h2>
-            <h3 class="artist">{{ albumArtist }}</h3>
-            <h4 class="year">{{ albumYear }}</h4>
+            <h2 class="album">{{ heading2 }}</h2>
+            <h3 class="artist">{{ heading3 }}</h3>
+            <h4 class="year">{{ heading4 }}</h4>
         </div>
     </li>
 </template>
@@ -14,7 +14,7 @@
 <script>
 export default {
     name: "Card",
-    props: ['albumPoster', 'albumTitle', 'albumArtist', 'albumYear']
+    props: ['image', 'heading2', 'heading3', 'heading4']
 }
 </script>
 
