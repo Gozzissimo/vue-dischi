@@ -1,5 +1,8 @@
 <template>
     <main>
+        <Select 
+            @selectGenre="filterGenre($event)"
+        />
         <div v-if="cards">
             <ul class="container flex" >
                 <Card 
@@ -21,6 +24,7 @@
 
 <script>
 import Card from "./Card.vue";
+import Select from "./Select.vue";
 import axios from 'axios';
 
 // {
@@ -103,6 +107,7 @@ export default {
     name: "Main",
     components: {
         Card,
+        Select,
     },
     mounted() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -119,6 +124,13 @@ export default {
         return {
             cards: null,
         }
+    },
+
+    methods: {
+        filterGenre() {
+            console.log('Test Funzione');
+            // this.cards
+        },
     }
 }
 </script>
