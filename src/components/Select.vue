@@ -1,6 +1,6 @@
 <template>
     <div class="filters flex">
-        <h1>Album</h1>
+        <h1>Genres</h1>
         <select 
             v-model="selectedGenre" 
             @change="$emit('selectGenre', selectedGenre)"
